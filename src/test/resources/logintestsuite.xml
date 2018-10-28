@@ -2,12 +2,25 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="LoginTests" parallel="false">
     <parameter name="propertyFile" value="login.properties"></parameter>
-	<test name="LoginSuite">
+	<test name="CommonTestSuite">
 		<classes>
 			<class name="seotests.SeoTest" />
+			
 			<class name="storetests.EnableStoreProductAndPaymentTest" />
 			<class name="storetests.EnableStoreProductPaymentAndShippingTest" />
 			<class name="storetests.EnableStoreProductTest" />
+			
+			<class name="shoppingchannels.EnableFaceBookShoppingChannel" />
+			
+			<class name="profileTests.ChangeCompanyAddressTest" />
+			<class name="profileTests.ChangeCompanyNameTest" />
+			<class name="profileTests.ChangeNameTest" />
+			<class name="profileTests.ChangeNotificationEmailTest" />
+			<class name="profileTests.ChangePhoneNumberTest" />
+			
+			<class name="logintests.products.ProductsTest" />
+			<class name="logintests.products.DeleteProductsTest" />
+			
 		</classes>
 	</test>
 </suite>
