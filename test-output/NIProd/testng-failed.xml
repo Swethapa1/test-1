@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [NIProd]">
+  <parameter name="propertyFile" value="Signup.properties"/>
+  <test thread-count="5" name="NI Test - Sanity(failed)">
+    <classes>
+      <class name="SignUpTest">
+        <methods>
+          <include name="testMethod" invocation-numbers="0"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- SignUpTest -->
+    </classes>
+  </test> <!-- NI Test - Sanity(failed) -->
+</suite> <!-- Failed suite [NIProd] -->
