@@ -4,7 +4,7 @@
     <parameter name="propertyFile" value="login.properties"></parameter>
 	<test name="NI Test - Sanity">
 		<classes>
-			<class name="SeoTest" />			
+			<class name="seo.SeoTest" />			
 		</classes>
 	</test>
 </suite>
