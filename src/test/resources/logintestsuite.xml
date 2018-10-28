@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="NIProd" parallel="false">
+<suite name="LoginTests" parallel="false">
     <parameter name="propertyFile" value="login.properties"></parameter>
-	<test name="NI Test - Sanity">
+	<test name="LoginSuite">
 		<classes>
-			<class name="seotests.SeoTest" />			
+			<class name="seotests.SeoTest" />
+			<class name="storetests.EnableStoreProductAndPaymentTest" />
+			<class name="storetests.EnableStoreProductPaymentAndShippingTest" />
+			<class name="storetests.EnableStoreProductTest" />
 		</classes>
 	</test>
 </suite>
