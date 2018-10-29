@@ -27,7 +27,19 @@ public class TestRemoteDriver {
 	}
 	
 	private void launchBrowser() throws MalformedURLException {
-		DesiredCapabilities capabilities = new DesiredCapabilities();
+	
+	System.setProperty("webdriver.chrome.driver", "./src/test/resources/chromedriver");
+		ChromeOptions options = new ChromeOptions();
+		options.setCapability(CapabilityType.PLATFORM_NAME, Platform.LINUX);
+		options.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.ACCEPT);
+		options.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+		options.addArguments("--headless");
+		options.addArguments("--disable-gpu");
+		options.addArguments("--disable-extensions");
+		options.addArguments("--no-sandbox");
+		driver = new RemoteWebDriver(new URL(properties.get("url")), options);
+		
+		/*DesiredCapabilities capabilities = new DesiredCapabilities();
 	   // capabilities.setPlatform(Platform.LINUX);
 	    capabilities.setBrowserName(properties.get("url"));
 	    ChromeOptions chromeOptions = new ChromeOptions();
@@ -38,7 +50,7 @@ public class TestRemoteDriver {
 		chromeOptions.addArguments("--no-sandbox");
 	    //driver = new ChromeDriver(chromeOptions);
 		driver1 = new RemoteWebDriver(new URL(properties.get("url")),capabilities);
-	    driver.navigate().to(properties.get("url"));
+	    driver.navigate().to(properties.get("url"));*/
 	}
 	
 	@Test
